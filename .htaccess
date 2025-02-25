@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.webp|\.gif|\.jpeg|\.zip|\.css|\.svg|\.js|\.pdf)$
+RewriteCond %{REQUEST_URI}  !(/init/install.php|/init/generate_token.php)$
+RewriteRule (.*) routes/web.php [QSA,L]
